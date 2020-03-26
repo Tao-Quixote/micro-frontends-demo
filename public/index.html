@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <style>
+      .App {
+        background-color: #282c34;
+        color: #fff;
+      }
+
+      .nav {
+        line-height: 30px;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+      }
+
+      .main {
+        font-size: 0;
+      }
+
+      .left {
+        width: 300px;
+        display: inline-block;
+        font-size: 16px;
+        vertical-align: top;
+      }
+
+      li {
+        cursor: pointer;
+        line-height: 30px;
+        text-align: left;
+      }
+
+      #mainContain {
+        display: inline-block;
+        width: calc(100% - 301px);
+        background-color: #999;
+        min-height: 500px;
+        font-size: 16px;
+        border-left: 1px solid #fff;
+        vertical-align: top;
+      }
+    </style>
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="App">
+      <div class="nav">This is nav bar.</div>
+      <div class="main">
+        <div class="left">
+          <ul>
+            <li onclick="push('/react')">React</li>
+            <li onclick="push('/vue')">Vue</li>
+          </ul>
+        </div>
+        <div id="mainContain"></div>
+      </div>
+    </div>
+    <script>
+      function push(subapp) { history.pushState(null, subapp, subapp) }
+    </script>
+  </body>
+</html>
